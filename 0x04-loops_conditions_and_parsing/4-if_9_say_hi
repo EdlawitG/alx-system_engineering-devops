@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
-# Displays "Best School" 10 times using a while loop.
-#   On the 9th iteration, displays "Hi" before "Best School".
+# prints ten lines of same text except for the ninth line which is different
 
-count=0
-
-while [ $count -lt 10 ]
+x=1
+while [ $x -le 10 ]
 do
-  if [ $count -eq 9 ]
-  then
-    echo "Hi"
-  fi
-  echo "Best School"
-  (( count++ ))
+    if [ $x -eq 9 ]
+    then
+	echo "Best School"
+	echo "Hi"
+    else
+	echo "Best School"
+    fi
+    
+x=$((x + 1))  
 done
